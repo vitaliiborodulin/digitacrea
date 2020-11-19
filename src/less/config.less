@@ -1,0 +1,170 @@
+// USER VARIABLES SECTION
+
+@accent: #5a9f30; // Accent Color
+@textcolor: #5b5b5b; // Text Color
+@dark: #1F242E;
+@white: #ffffff;
+@mainfamily: 'Oswald', sans-serif; // Main Font Family
+
+
+// FONTS LOAD SECTION
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Light.eot');
+	src: url('../fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Oswald-Light.woff') format('woff'),
+	url('../fonts/Oswald-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Medium.eot');
+	src: url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Oswald-Medium.woff') format('woff'),
+	url('../fonts/Oswald-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Light.eot');
+	src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Poppins-Light.woff') format('woff'),
+	url('../fonts/Poppins-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant';
+	src: url('../fonts/Cormorant-Bold.eot');
+	src: url('../fonts/Cormorant-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Cormorant-Bold.woff') format('woff'),
+	url('../fonts/Cormorant-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+// GENERAL DOCUMENT STYLES
+
+.reset();
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	.wrapper();
+}
+
+::placeholder {
+	color: @textcolor;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+input,
+textarea {
+	outline: none;
+
+	&:focus:required:invalid {
+		border-color: red
+	}
+
+	&:required:valid {
+		border-color: green
+	}
+}
+// html {
+// 	scroll-behavior: smooth;
+// }
+
+body {
+	font-size: 16px;
+	// .md(font-size, 15px);
+	// .sm(font-size, 14px);
+	min-width: 320px;
+	position: relative;
+	// line-height: 1.65;
+	font-family: @mainfamily;
+	// font-weight: normal;
+	// overflow-x: hidden;
+  	color: @textcolor;
+	  // letter-spacing: 0.01em;
+}
+
+input, button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.5s;
+
+	&:hover {
+		color: @accent;
+	}
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-family: "Adderley";
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2.2rem;
+	font-family: "Adderley";
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.7rem;
+	font-family: "Adderley";
+	font-weight: bold;
+}
+
+.section__title {
+	color: @white;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+// common
+
+.section__common, .archive .services {
+	padding: 30px 0;
+	min-height: 100vh;
+}
+
+.section__title--common {
+	color: #000;
+}
+
+// 404
+
+.error404 {
+	height: 100vh;
+}
+
+
+.h-400 {
+	height: 400px;
+	overflow-y: auto;
+}
