@@ -1,4 +1,189 @@
-.main-header {
-	min-height: 140px;
+.header {
+	padding: 30px 0;
+
+	color: @dark;
 	background-color: @white;
+
+	&--sticky {
+		position: fixed;
+    width: 100%;
+		padding: 5px 0;
+    z-index: 999;
+		
+		box-shadow: 0 3px 8px 0 rgba(0,0,0,.18);
+		animation: slideInDown 0.5s 1 ease-in-out;
+	}
+
+	&__content {
+		min-height: 45px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logolink {
+		width: 272px;
+		height: 70px;
+
+		.sm-block({
+			width: 117px;
+			height: 35px;
+		})
+	}
+
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 600px;
+		.xl(display, none);
+
+		li {
+			text-transform: uppercase;
+			font-family: 'Oswald', sans-serif;
+			font-size: 16px;
+			letter-spacing: 0.05em;
+
+			&:not(:last-child){
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+
+		li {
+			position: relative;
+			transition: all .5s ease;
+
+			&:not(:last-child){
+				margin-right: 40px;
+				.sm(margin-right, 22px);
+			}
+
+			svg path{
+				transition: all .5s ease;
+			}
+
+			svg:hover path{
+				fill: @accent;
+			}
+		}
+	}
+
+	&__cart-count {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-size: 12px;
+		font-weight: 700;
+
+		color: @textcolor;
+		background-color: @accent;
+
+		.sm-block({
+			width: 14px;
+			height: 14px;
+			font-size: 9px;
+		});
+	}
+
+	&__burger {
+		@toggler-part-height: 2px;
+		@toggler-part-bg-color: @textcolor;
+		@transition-time: 0.5s;
+
+		display: none;
+  .xl-block({
+    display: block;
+    display: flex;
+  });
+  // position: relative;
+  // z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 14px;
+  user-select: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  & > span {
+    display: inline-block;
+    width: 100%;
+    height: @toggler-part-height;
+    background: @toggler-part-bg-color;
+    position: relative;
+    transition: background @transition-time @transition-time;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: @toggler-part-height;
+      background: @toggler-part-bg-color;
+      transform-origin: 50% 50%;
+      transition: top @transition-time @transition-time, transform @transition-time;
+    }
+
+    &:before {
+			width: 100%;
+      top: -6px;
+    }
+
+    &:after {
+			width: 70%;
+      top: 6px;
+    }
+  }
+
+  &--close {
+
+    > span {
+      transition: background @transition-time;
+      background: transparent;
+
+      &:before,
+      &:after {
+        transition: top @transition-time, transform @transition-time @transition-time;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+
+	}
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
 }

@@ -41,7 +41,7 @@ const cssDev = () => {
     return gulp.src("./src/less/styles.less")
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(gcmq())//?
+        .pipe(gcmq())
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dist + "/css"))
@@ -52,13 +52,13 @@ exports.cssDev = cssDev;
 
 const cssProd = () => {
     return gulp.src("./src/less/styles.less")
-        .pipe(less())
-        .pipe(autoprefixer())
-        .pipe(cleanCss({
-            level: 2
-        }))
-        .pipe(gulp.dest(dist + "/css"))
-        .pipe(sync.stream());
+		// .pipe(sourcemaps.init())
+		.pipe(less())
+		.pipe(gcmq())
+		.pipe(autoprefixer())
+		// .pipe(sourcemaps.write())
+		.pipe(gulp.dest(dist + "/css"))
+		.pipe(sync.stream());
 }
 
 exports.cssProd = cssProd;

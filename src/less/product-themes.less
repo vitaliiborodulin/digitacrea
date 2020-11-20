@@ -1,155 +1,95 @@
-.about {
-    padding: 30px 0;
-    background: url(../img/about-bg.jpg) no-repeat center/cover;
-    background-attachment: fixed;
-    .lg-block({
-        background-position: left top;
-        background-attachment: scroll;
-    });
-    height: auto;
-}
+.product-themes {
+	padding-top: 8px;
+	padding-bottom: 80px;
+	.sm(padding-bottom, 20px);
 
-.about__content {
-    .row-flex();
-    justify-content: center;
-    align-items: center;
-    color: @white;
+	&__title-box {
+		margin-bottom: 60px;
 
-    h3 {
-        // font-size: 24px;
-        // color: @accent;
-        
-        margin-bottom: 10px;
-        // text-transform: uppercase;
-        // font-weight: bold;
-        
-    }
-}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100px;
+			height: 1px;
+			background-color: @dark;
+			bottom: -1px;
+		}
+	}
 
-.about__title {
-    .lg(text-align, center);
-}
+	&__box {
+		.row-flex();
+		.lg(justify-content, center);
+	}
 
-.about__text {
-    .col();
-    .size(6);
-    .size-lg(12);
+	&__item {
+		.col();
+		.size(4);
+		.size-lg(6);
+		.size-md(12);
 
-    h3 {
-        text-decoration: underline;
-        .lg(display, none);
-    }
-    
-    p {
-        margin-bottom: 20px;
-        // font-family: 'calibribold', sans-serif;
+		position: relative;
 
-        .lg(display, none);
-    }
+		max-width: 370px;
+		height: 370px;
+		margin-bottom: 40px;
+		// padding-top: 36px;
+		// padding-bottom: 20px;
+		// text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		background-color: @grey;
+		// overflow: hidden;
 
-}
+		transition: all 0.5s ease;
 
-.about__text h2 + p {
-    .lg(display, block);
-}
+		.sm-block({
+			height: 150px;
+			margin-bottom: 20px;
+			// justify-content: start;
+		});
 
-.about__title {
-    margin-bottom: 20px;
-}
-.about__picture {
-    .col();
-    .size(6);
-    .lg(display, none);
+		&:hover {
+			box-shadow: 0 3px 8px 0 rgba(0,0,0,.18);
+		}
+	}
 
-    text-align: center;
-    img {
-        width: 622px;
-        height: auto;
-    }
-}
+	&__img {
+		.sm-block({
+			max-height: 140px;
+		})
+	}
 
-.about__mobile {
-    display: none;
-    .lg(display, block);
-    width: calc(100% / 12 * 12 - 30px);
+	&__link {
+		position: absolute;
+		bottom: 20px;
+		.sm(bottom, 0);
+		left: 0;
+		
+		padding: 5px 18px;
+		padding-right: 34px;
 
-    h3 {
-        text-align: center;
-    }
+		font-family: 'Oswald', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		// line-height: 1.5;
+		letter-spacing: 0.1em;
+		color: @white;
+		background-color: @dark;
+		text-transform: uppercase;
 
-    li {
-        // font-size: 20px;
-        margin-bottom: 10px;
+		&::after {
+			position: absolute;
+			top: 12px;
+			right: 15px;
 
-        b {
-            font-size: 27px;
-        }
-    }
-    
-}
-
-.about__advantage {
-    display: none;
-    .lg(display, block);
-
-    background: url(../img/advan-m.jpg) no-repeat center top/cover;
-    padding: 30px;
-
-    h3 {
-        color: @white;
-        text-align: right;
-        // font-weight: bold;
-        // font-size: 24px;
-        margin-bottom: 10px;
-        // text-transform: uppercase;
-    }
-    
-    ul {
-        // font-size: 20px;
-        color: @white;
-
-        li {
-            margin-bottom: 10px;
-            padding-left: 90px;
-            position: relative;
-
-            &::before {
-                display: block;
-                content: '';
-                position: absolute;
-                left: 10px;
-            }
-
-            &:first-child::before {
-                background: url(../img/about-m-1.png) no-repeat center/cover;
-                width: 34px;
-                height: 40px;
-            }
-
-            &:nth-child(2)::before {
-                background: url(../img/about-m-2.png) no-repeat center/cover;
-                width: 67px;
-                height: 40px;
-                left: 0;
-            }
-
-            &:nth-child(3)::before {
-                background: url(../img/about-m-3.png) no-repeat center/cover;
-                width: 33px;
-                height: 40px;
-            }
-
-            &:nth-child(4)::before {
-                background: url(../img/about-m-4.png) no-repeat center/cover;
-                width: 33px;
-                height: 40px;
-            }
-
-            &:nth-child(5)::before {
-                background: url(../img/about-m-5.png) no-repeat center/cover;
-                width: 46px;
-                height: 40px;
-            }
-        }
-    }
+			content:'';
+			background-image: url(../img/icon-arrow-item.svg);
+			width: 14px;
+			height: 14px;
+		}
+	}
 }

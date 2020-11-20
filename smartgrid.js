@@ -3,25 +3,27 @@ module.exports = {
     offset: '40px', //columns
     container: {
         maxWidth: '1200px',
-        fields: '50px' // container
+        fields: '20px' // container
     },
     breakPoints: {
-        lg: {
-            width: '1100px',
+        xl: {
+            width: '1140px'
+				},
+				lg: {
+					width: '960px'
+				},
+        md: {
+            width: '720px'
         },
-        // md: {
-        //     width: '768px'
-        // },
-        // sm: {
-        //     width: '600px',
-        //     fields: '15px'
-        // },
-        // xs: {
-        //     width: '480px'
-        // },
-        // xxs: {
-			  //     width: '320px',
-        // }
+        sm: {
+            width: '540px'
+        },
+        xs: {
+            width: '480px'
+        },
+        xxs: {
+			      width: '320px',
+        }
 	},
 	detailedCalc: true
 };

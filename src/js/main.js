@@ -1,3 +1,5 @@
 $(function(){
-	console.log(1);
+	
+	//= components/header.js
+
 });
