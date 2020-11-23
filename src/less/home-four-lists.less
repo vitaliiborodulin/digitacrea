@@ -1,0 +1,77 @@
+.four-lists {
+	padding-top: 80px;
+	padding-bottom: 88px;
+	.md(padding-bottom, 0);
+
+	&__box {
+		.row-flex();
+		justify-content: center;
+	}
+
+	&__item {
+		.col();
+		.size(3);
+		.size-lg(6);
+		.size-xs(12);
+		padding-top: 80px;
+		position: relative;
+		.lg-block({
+			padding-top: 10px;
+			margin-bottom: 40px;
+		});
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		&--tshirts {
+			background: url(../img/icon-tshirts-list.svg) no-repeat;
+		}
+
+		&--sweatshirts {
+			background: url(../img/icon-sweatshirts-list.svg) no-repeat;
+		}
+
+		&--gifts {
+			background: url(../img/icon-gifts-list.svg) no-repeat;
+		}
+
+		&--sports {
+			background: url(../img/icon-sports-list.svg) no-repeat;
+		}
+	}
+
+	&__title {
+		margin-bottom: 35px;
+		font-size: 24px;
+		
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 300;
+
+		.lg-block({
+			padding-left: 75px;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.08em
+		});
+		.xxs-block({
+			padding-left: 0;
+			text-align: center;
+		});
+	}
+
+	&__list li {
+		font-size: 16px;
+		margin-bottom: 20px;
+		.lg-block({
+			font-size: 14px;
+			margin-bottom: 20px;
+		});
+	}
+}

@@ -1,0 +1,46 @@
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	// .md-block({
+	// 	padding: 12px 17px;
+	// });
+	padding-right: 60px;
+
+	color: @white;
+	background-color: @accent;
+
+	font-family: 'Oswald', sans-serif;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	font-size: 14px;
+
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.07), 10px 10px 30px rgba(0, 0, 0, 0.07);
+	transition: all .5s ease;
+	// transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1),border-color .45s cubic-bezier(.25,1,.33,1),color .45s cubic-bezier(.25,1,.33,1),background-color .45s cubic-bezier(.25,1,.33,1),box-shadow .45s cubic-bezier(.25,1,.33,1);
+
+	&:hover {
+		color: @white;
+		transform: translateY(-3px);
+		box-shadow: none;
+		opacity: .85;
+	}
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 30px;
+
+		content:'';
+		background-image: url(../img/icon-arrow-left.svg);
+		width: 22px;
+		height: 12px;
+	}
+}

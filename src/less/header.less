@@ -14,8 +14,23 @@
 		padding: 5px 0;
     z-index: 999;
 		
+		color: @dark!important;
+		background-color: @white!important;
 		box-shadow: 0 3px 8px 0 rgba(0,0,0,.18);
 		animation: slideInDown 0.5s 1 ease-in-out;
+
+		svg path{
+			fill: @textcolor!important;
+		}
+
+		.header__burger > span {
+			background-color: @dark!important;
+			
+			&:before,
+    	&:after {
+				background-color: @dark!important;
+			}
+		}
 	}
 
 	&__content {
@@ -180,14 +195,29 @@
 	}
 }
 
-@keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-  }
+.home {
+	.header {
+		width: 100%;
+		position: fixed;
+		z-index: 10;
+		color: @white;
+		background-color: transparent;
+
+		font-weight: 700;
+
+		svg path{
+			fill: @white;
+		}
+
+		&__burger > span {
+			background-color: @white;
+			
+			&:before,
+    	&:after {
+				background-color: @white;
+			}
+		}
+
+	}
 }
+
