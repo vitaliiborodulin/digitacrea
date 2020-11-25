@@ -19,6 +19,13 @@
 		box-shadow: 0 3px 8px 0 rgba(0,0,0,.18);
 		animation: slideInDown 0.5s 1 ease-in-out;
 
+		.logo {
+			display: block!important;
+		}
+		.logo--alt {
+			display: none!important;
+		}
+
 		svg path{
 			fill: @textcolor!important;
 		}
@@ -42,12 +49,18 @@
 
 	&__logolink {
 		width: 272px;
-		height: 70px;
+		// height: 70px;
 
 		.sm-block({
 			width: 117px;
-			height: 35px;
-		})
+			// height: 35px;
+		});
+
+		.logo--alt {
+			padding-top: 6px;
+			.sm(padding-top, 0);
+			display: none;
+		}
 	}
 
 	&__menu {
@@ -205,6 +218,15 @@
 		background-color: transparent;
 
 		font-weight: 500;
+
+		&__logolink {
+			.logo {
+				display: none;
+			}
+			.logo--alt {
+				display: block;
+			}
+		}
 
 		svg path{
 			fill: @white;
