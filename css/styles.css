@@ -2035,10 +2035,15 @@ a .active {
     font-size: 12px;
   }
 
+  .intro__item:nth-child(odd) .intro__subtitle {
+    padding-left: 20px;
+    padding-right: 160px;
+  }
+
   .intro__subtitle {
     top: -40px;
     padding-left: 160px;
-    padding-right: 0;
+    padding-right: 20px;
   }
 
   .trending__item {
