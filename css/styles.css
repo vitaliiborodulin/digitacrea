@@ -378,6 +378,14 @@ a .active {
           animation: slideInDown 0.5s 1 ease-in-out;
 }
 
+.header--sticky .logo {
+  display: block!important;
+}
+
+.header--sticky .logo--alt {
+  display: none!important;
+}
+
 .header--sticky svg path {
   fill: #000000 !important;
 }
@@ -400,7 +408,11 @@ a .active {
 
 .header__logolink {
   width: 272px;
-  height: 70px;
+}
+
+.header__logolink .logo--alt {
+  padding-top: 6px;
+  display: none;
 }
 
 .header__menu {
@@ -529,6 +541,14 @@ a .active {
   color: #ffffff;
   background-color: transparent;
   font-weight: 500;
+}
+
+.home .header__logolink .logo {
+  display: none;
+}
+
+.home .header__logolink .logo--alt {
+  display: block;
 }
 
 .home .header svg path {
@@ -1929,7 +1949,10 @@ a .active {
 @media screen and (max-width: 540px) {
   .header__logolink {
     width: 117px;
-    height: 35px;
+  }
+
+  .header__logolink .logo--alt {
+    padding-top: 0;
   }
 
   .header__user li {
