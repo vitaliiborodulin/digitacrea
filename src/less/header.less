@@ -181,12 +181,12 @@
     }
 
     &:after {
-			width: 100%;
+			width: 80%;
       top: 7px;
     }
   }
 
-  &--close {
+  &--close, .header.header--sticky burger.burger--close > span{
 
     > span {
       transition: background @transition-time;
@@ -194,6 +194,7 @@
 
       &:before,
       &:after {
+				width: 100%;
         transition: top @transition-time, transform @transition-time @transition-time;
         top: 0;
       }
@@ -246,10 +247,8 @@
 	}
 }
 
-.header-burger.header-burger--close {
-	& > span {
-		width: 0;
-		opacity: 0;
-	}
+.header--sticky .header__burger--close > span {
+		background-color: transparent!important;
 }
+
 
