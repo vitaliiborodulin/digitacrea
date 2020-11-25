@@ -2030,6 +2030,12 @@ a .active {
     width: calc(100% / 12 * 12 - 40px);
   }
 
+  .product-categories__item {
+    width: 100%!important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .product-themes {
     padding-bottom: 20px;
   }
