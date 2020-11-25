@@ -53,33 +53,33 @@
 	&__menu {
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 600px;
+		margin-left: auto;
+		// max-width: 630px;
 		.xl(display, none);
 
 		li {
 			text-transform: uppercase;
 			font-family: 'Oswald', sans-serif;
 			font-size: 16px;
-			letter-spacing: 0.05em;
+			letter-spacing: 0.1em;
 
-			&:not(:last-child){
-				margin-right: 20px;
-			}
+			margin-right: 33px;
+			// &:not(:last-child){}
 		}
 	}
 
 	&__user {
 		display: flex;
 		align-items: center;
+		.xl(margin-left, auto);
 
 		li {
 			position: relative;
 			transition: all .5s ease;
 
-			&:not(:last-child){
-				margin-right: 40px;
+			margin-right: 33px;
 				.sm(margin-right, 22px);
-			}
+			// &:not(:last-child){}
 
 			svg path{
 				transition: all .5s ease;
@@ -203,7 +203,7 @@
 		color: @white;
 		background-color: transparent;
 
-		font-weight: 700;
+		font-weight: 500;
 
 		svg path{
 			fill: @white;
