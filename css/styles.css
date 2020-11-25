@@ -420,6 +420,7 @@ a .active {
 .header__user {
   display: flex;
   align-items: center;
+  padding-top: 2px;
 }
 
 .header__user li {
