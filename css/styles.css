@@ -1541,6 +1541,12 @@ a .active {
 
 @media (max-width: 1920px) {
   .product-categories__navigation--desktop {
+    left: 0;
+  }
+}
+
+@media (max-width: 1746px) {
+  .product-categories__navigation--desktop {
     display: none;
   }
 
