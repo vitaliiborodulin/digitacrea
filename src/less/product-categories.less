@@ -5,7 +5,7 @@
 	// боковая навигация
 	&__navigation--desktop {
 		position: fixed;
-		// left: 0;
+		// 
 		top: 0;
 		width: 270px;
 		height: 100vh;
@@ -16,6 +16,10 @@
 		background-color: @grey;
 		
 		@media (max-width: 1920px){
+			// display: none;
+			left: 0;
+		}
+		@media (max-width: 1746px){
 			display: none;
 		}
 	}
@@ -53,7 +57,7 @@
 		margin-bottom: 30px;
 		text-align: center;
 		display: none;
-		@media (max-width: 1920px){
+		@media (max-width: 1746px){
 			display: block;
 		}
 
