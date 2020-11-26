@@ -153,7 +153,20 @@ body {
 }
 
 .scroll-disabled {
+	position: relative;
 	overflow: hidden;
+	&::before {
+		background: rgba(0,0,0,0.8);
+		position: absolute;
+		// pointer-events: none;
+		height: 100%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: '';
+		display: block;
+		z-index: 99;
+	}
 }
 
 input, button {
