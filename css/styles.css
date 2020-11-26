@@ -443,27 +443,8 @@ a .active {
   margin-right: 33px;
 }
 
-.header__menu.header__menu--open1 {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 200px;
-  z-index: 12;
-  width: 270px;
-  padding: 190px 40px;
-  transform: translate3d(0vh, 0, 0);
-}
-
-.header__menu.header__menu--open1::before {
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  width: 100%;
-  content: '';
-  display: block;
-  z-index: 10;
+.header__menu.header__menu--open {
+  transform: translate3d(0vh, 0vh, 0);
 }
 
 .header__user {
@@ -1646,7 +1627,24 @@ a .active {
 
 @media screen and (max-width: 1140px) {
   .header__menu {
+    transform: translate3d(35vh, -35vh, 0);
     display: none;
+    -ms-transform-origin: right top;
+        transform-origin: right top;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 133px;
+    z-index: 12;
+    width: 270px;
+    padding: 190px 40px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .header__menu li {
+    margin-bottom: 20px;
   }
 
   .header__user {
@@ -1656,6 +1654,10 @@ a .active {
   .header__burger {
     display: block;
     display: flex;
+  }
+
+  .header--sticky .header__menu {
+    top: 80px;
   }
 
   .hero__content {
