@@ -1,7 +1,8 @@
-$('#search').on('click', function (e) {
+$('#search').on('click', function(e) {
 	e.preventDefault();
 	$('.search__wrapper').addClass('search__wrapper--open');
 	$('body').addClass('scroll-disabled');
+	$('.search__input').focus();
 
 	if($('.search__wrapper').hasClass('search__wrapper--open')) {
 		$(document).mouseup(function (e){ 
@@ -22,6 +23,12 @@ $('#search').on('click', function (e) {
 	
 	}
 
+});
+
+$('#c').on('click', function(e) {
+	e.preventDefault();
+	$('.search__wrapper').removeClass('search__wrapper--open');
+	$('body').removeClass('scroll-disabled');
 });
 
 
