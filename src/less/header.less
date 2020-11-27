@@ -115,6 +115,7 @@
 			letter-spacing: 0.1em;
 
 			margin-right: 33px;
+			.xl(margin-right, 0);
 			// &:not(:last-child){}
 		}
 	}
@@ -229,9 +230,10 @@
   }
 
   &--close {
-		position: absolute;
-		right: 0;
-		top: 0;
+		position: relative;
+		// position: absolute;
+		// right: 0;
+		// top: 0;
 		z-index: 12;
 
     > span {
