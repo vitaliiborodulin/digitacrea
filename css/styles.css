@@ -562,9 +562,7 @@ a .active {
 }
 
 .header__burger--close {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
   z-index: 12;
 }
 
@@ -1690,6 +1688,10 @@ a .active {
     margin-bottom: 20px;
   }
 
+  .header__menu li {
+    margin-right: 0;
+  }
+
   .header__user {
     margin-left: auto;
   }
@@ -2121,7 +2123,11 @@ a .active {
 
 @media screen and (max-width: 480px) {
   .search__input {
-    font-size: 60px;
+    font-size: 48px;
+  }
+
+  .search__hit {
+    font-size: 15px;
   }
 
   .themes__item {
